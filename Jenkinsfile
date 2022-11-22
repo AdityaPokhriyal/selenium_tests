@@ -1,13 +1,13 @@
 node {
 	stage ('SCM checkout'){
-		git "https://gitlab.com/mbabilo/experitest"
+		git "https://www.amazon.in/"
 		}
 	stage ('Build'){
-    	dir("comtest") {
+    	dir("seleniumJavaFramework") {
 	   sh "mvn clean install"
        }
-       	dir("comtest/target") {
-	   sh "java -jar com.test-1.0-SNAPSHOT.jar"
+       	dir("seleniumJavaFramework/target") {
+	   sh "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
        }
 		}
 }
