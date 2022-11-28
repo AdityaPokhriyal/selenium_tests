@@ -4,10 +4,10 @@ node {
 		}
 	stage ('Build'){
     	dir("C:/Users/asus/eclipse-workspace/seleniumJavaFramework") {
-	   sh "mvn clean install"
+	   bat "mvn clean install"
        }
        	dir("C:/Users/asus/eclipse-workspace/seleniumJavaFramework/target") {
-	   sh "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
+	   bat "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
        }
 		}
 }
