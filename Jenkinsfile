@@ -3,10 +3,10 @@ node {
 		git "https://github.com/AdityaPokhriyal/selenium_tests.git"
 		}
 	stage ('Build'){
-    	dir("seleniumJavaFramework") {
+    	dir("C:/Users/asus/eclipse-workspace/seleniumJavaFramework") {
 	   sh "mvn clean install"
        }
-       	dir("seleniumJavaFramework/target") {
+       	dir("C:/Users/asus/eclipse-workspace/seleniumJavaFramework/target") {
 	   sh "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
        }
 		}
