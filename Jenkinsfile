@@ -1,6 +1,6 @@
 node {
 	stage ('SCM checkout'){
-		git "https://www.amazon.in/"
+		git "https://github.com/AdityaPokhriyal/selenium_tests.git"
 		}
 	stage ('Build'){
     	dir("seleniumJavaFramework") {
