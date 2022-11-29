@@ -1,5 +1,7 @@
 package seleniumJavaFramework;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class browserTest2_testNG {
+public class browserTest6_testNG6 {
 	
 	WebDriver driver = null;
 	
@@ -17,15 +19,16 @@ public class browserTest2_testNG {
 		driver = new ChromeDriver();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
-		driver.get("https://www.amazon.in/");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://www.geeksforgeeks.org/");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Iphone 13");
-		driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"low-price\"]")).sendKeys("40000");
-		driver.findElement(By.xpath("//*[@id=\"high-price\"]")).sendKeys("60000");
-		driver.findElement(By.xpath("//*[@id=\"a-autoid-1\"]/span/input")).click();
+		driver.findElement(By.xpath("//*[@id=\"whatsNewCardContainer\"]/div[3]/div/div/a/div/div[2]/div[3]")).click();
+		driver.findElement(By.xpath("//*[@id=\"header_2\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[4]/div[2]/div/div[1]/div[2]/div[1]/a[1]/div[3]/div/button")).click();
+		driver.close();
 	}
 	
 	@AfterTest

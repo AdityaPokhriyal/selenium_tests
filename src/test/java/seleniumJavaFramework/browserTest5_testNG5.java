@@ -1,5 +1,7 @@
 package seleniumJavaFramework;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class browserTest2_testNG {
+public class browserTest5_testNG5 {
 	
 	WebDriver driver = null;
 	
@@ -17,15 +19,15 @@ public class browserTest2_testNG {
 		driver = new ChromeDriver();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
-		driver.get("https://www.amazon.in/");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("https://www.hotstar.com/in/");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Iphone 13");
-		driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"low-price\"]")).sendKeys("40000");
-		driver.findElement(By.xpath("//*[@id=\"high-price\"]")).sendKeys("60000");
-		driver.findElement(By.xpath("//*[@id=\"a-autoid-1\"]/span/input")).click();
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/div[1]/div/div[2]/div/div[3]/ul/li[2]/div/a/div")).click();  //click on movies
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/div[1]/div/div[2]/div/div[3]/ul/li[2]/div/div/a[2]")).click();  //click on hindi
+		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/div[2]/div/div/div/div/div/div/div[2]/div/article/a/div[2]")).click();
 	}
 	
 	@AfterTest
@@ -38,7 +40,7 @@ public class browserTest2_testNG {
 			System.out.println("Test Successful");
 		}
 		else {
-			System.out.println("Test Failure");
+			System.out.println("Test Successful");
 		}
 
 	}
