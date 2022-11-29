@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite1" class="navigator-link">
-              <span class="suite-name border-passed">Suite1</span>
+              <span class="suite-name border-failed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite1">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest6_testNG6" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,16 +115,6 @@
                       <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
                     </span>
                     <div class="method-list-content passed suite-Suite1">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest8_testNG8" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest4_testNG4" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest7_testNG7" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
@@ -123,17 +127,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest5_testNG5" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest8_testNG8" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest2_testNG" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest6_testNG6" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest5_testNG5" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="seleniumJavaFramework.browserTest4_testNG4" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -148,9 +157,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-passed">
+          <div class="suite-Suite1-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">seleniumJavaFramework.browserTest6_testNG6</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -159,10 +168,23 @@
                   <a name="test">
                   </a> <!-- test -->
                   <span class="method-name">test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@id=&quot;whatsNewCardContainer&quot;]/div[3]/div/div/a/div/div[2]/div[3]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at seleniumJavaFramework.browserTest6_testNG6.test(browserTest6_testNG6.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-passed -->
+          </div> <!-- suite-Suite1-class-failed -->
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -196,7 +218,7 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">seleniumJavaFramework.browserTest2_testNG</span>
+              <span class="class-name">seleniumJavaFramework.browserTest4_testNG4</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -211,7 +233,7 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">seleniumJavaFramework.browserTest4_testNG4</span>
+              <span class="class-name">seleniumJavaFramework.browserTest2_testNG</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -276,7 +298,6 @@
       &lt;class name=&quot;seleniumJavaFramework.browserTest6_testNG6&quot;/&gt;
       &lt;class name=&quot;seleniumJavaFramework.browserTest7_testNG7&quot;/&gt;
       &lt;class name=&quot;seleniumJavaFramework.browserTest8_testNG8&quot;/&gt;
-      &lt;class name=&quot;seleniumJavaFramework.TC1&quot;/&gt;
       &lt;class name=&quot;seleniumJavaFramework.xyz&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
@@ -291,7 +312,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (10 classes)</span>
+                <span class="test-name">Test1 (9 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -321,31 +342,31 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'seleniumJavaFramework.browserTest8_testNG8')
-data.setCell(0, 3, 31220);
+data.setCell(0, 3, 22459);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test')
 data.setCell(1, 2, 'seleniumJavaFramework.browserTest6_testNG6')
-data.setCell(1, 3, 10030);
+data.setCell(1, 3, 19204);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'test')
 data.setCell(2, 2, 'seleniumJavaFramework.browserTest7_testNG7')
-data.setCell(2, 3, 9835);
+data.setCell(2, 3, 13889);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'test')
 data.setCell(3, 2, 'seleniumJavaFramework.browserTest2_testNG')
-data.setCell(3, 3, 8063);
+data.setCell(3, 3, 8463);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'test')
 data.setCell(4, 2, 'seleniumJavaFramework.browserTest4_testNG4')
-data.setCell(4, 3, 4567);
+data.setCell(4, 3, 4326);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'test')
 data.setCell(5, 2, 'seleniumJavaFramework.browserTest3_testNG3')
-data.setCell(5, 3, 4338);
+data.setCell(5, 3, 3802);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'test')
 data.setCell(6, 2, 'seleniumJavaFramework.browserTest5_testNG5')
-data.setCell(6, 3, 3207);
+data.setCell(6, 3, 3787);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
@@ -376,125 +397,113 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">seleniumJavaFramework.TC1</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUpTest</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest2_testNG</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">949 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">1935 ms</span>
+                <span class="method-start">2584 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">10002 ms</span>
+                <span class="method-start">11051 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest3_testNG3</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">10206 ms</span>
+                <span class="method-start">11338 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">11220 ms</span>
+                <span class="method-start">12700 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">15562 ms</span>
+                <span class="method-start">16502 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest4_testNG4</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">15816 ms</span>
+                <span class="method-start">16727 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">17143 ms</span>
+                <span class="method-start">18128 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">21710 ms</span>
+                <span class="method-start">22454 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest5_testNG5</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">21927 ms</span>
+                <span class="method-start">22783 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">22926 ms</span>
+                <span class="method-start">24063 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">26133 ms</span>
+                <span class="method-start">27850 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest6_testNG6</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">26431 ms</span>
+                <span class="method-start">28741 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test</span>
-                <span class="method-start">27455 ms</span>
+                <span class="method-start">30067 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">37486 ms</span>
+                <span class="method-start">49299 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest7_testNG7</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">37508 ms</span>
+                <span class="method-start">49474 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">39895 ms</span>
+                <span class="method-start">50828 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">49730 ms</span>
+                <span class="method-start">64718 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">seleniumJavaFramework.browserTest8_testNG8</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">49922 ms</span>
+                <span class="method-start">64899 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">50914 ms</span>
+                <span class="method-start">66112 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">82135 ms</span>
+                <span class="method-start">88571 ms</span>
               </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">seleniumJavaFramework.TC1</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">tearDownTest</span>
-                <span class="method-start">82323 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

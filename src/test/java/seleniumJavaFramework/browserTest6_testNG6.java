@@ -29,8 +29,7 @@ public class browserTest6_testNG6 {
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"whatsNewCardContainer\"]/div[3]/div/div/a/div/div[2]/div[3]")).click();
 		driver.findElement(By.xpath("//*[@id=\"header_2\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[4]/div[2]/div/div[1]/div[2]/div[1]/a[1]/div[3]/div/button")).click();
-		driver.close();
+		//driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[4]/div[2]/div/div[1]/div[2]/div[1]/a[1]/div[3]/div/button")).click();
 	}
 	
 	@AfterClass
