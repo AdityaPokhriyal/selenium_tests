@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-18T12:22:25 IST" name="Suite1" finished-at="2022-11-18T12:22:35 IST" duration-ms="10029">
+  <suite started-at="2022-11-29T23:05:09 IST" name="Suite1" finished-at="2022-11-29T23:05:21 IST" duration-ms="11418">
     <groups>
     </groups>
-    <test started-at="2022-11-18T12:22:25 IST" name="Test1" finished-at="2022-11-18T12:22:35 IST" duration-ms="10029">
+    <test started-at="2022-11-29T23:05:09 IST" name="Test1" finished-at="2022-11-29T23:05:21 IST" duration-ms="11418">
       <class name="seleniumJavaFramework.browserTest2_testNG">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-18T12:22:25 IST" name="setUpTest" finished-at="2022-11-18T12:22:26 IST" duration-ms="1564" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-29T23:05:09 IST" name="setUpTest" finished-at="2022-11-29T23:05:12 IST" duration-ms="2383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="test()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-18T12:22:26 IST" name="test" finished-at="2022-11-18T12:22:34 IST" duration-ms="8341" status="PASS">
+        <test-method signature="test()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-29T23:05:12 IST" name="test" finished-at="2022-11-29T23:05:20 IST" duration-ms="8694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-18T12:22:34 IST" name="tearDownTest" finished-at="2022-11-18T12:22:35 IST" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:seleniumJavaFramework.browserTest2_testNG@56620197]" started-at="2022-11-29T23:05:20 IST" name="tearDownTest" finished-at="2022-11-29T23:05:21 IST" duration-ms="299" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->

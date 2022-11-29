@@ -1,5 +1,7 @@
 package seleniumJavaFramework;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class browserTest2_testNG {
+public class browserTest8_testNG8 {
 	
 	WebDriver driver = null;
 	
@@ -17,15 +19,15 @@ public class browserTest2_testNG {
 		driver = new ChromeDriver();
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
-		driver.get("https://www.amazon.in/");
-		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Iphone 13");
-		driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"low-price\"]")).sendKeys("40000");
-		driver.findElement(By.xpath("//*[@id=\"high-price\"]")).sendKeys("60000");
-		driver.findElement(By.xpath("//*[@id=\"a-autoid-1\"]/span/input")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://fitgirl-repacks.site/");
+		driver.manage().window().maximize();                                                  
+		driver.findElement(By.xpath("//*[@id=\"menu-main-menu\"]/li[1]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"lcp_instance_0\"]/li[33]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"post-896\"]/div/p[2]/a[2]")).click();
 	}
 	
 	@AfterTest
