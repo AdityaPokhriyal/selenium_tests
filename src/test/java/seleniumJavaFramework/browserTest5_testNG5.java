@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ public class browserTest5_testNG5 {
 	
 	WebDriver driver = null;
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUpTest() {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Desktop\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -30,7 +32,7 @@ public class browserTest5_testNG5 {
 		driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/div[1]/div[2]/div/div/div/div/div/div/div[2]/div/article/a/div[2]")).click();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {	
 		String at = driver.getTitle();
 		String et = "Amazon.in : Iphone 13";
