@@ -3,7 +3,9 @@ package seleniumJavaFramework;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,7 @@ public class browserTest2_testNG {
 	
 	WebDriver driver = null;
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUpTest() {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Desktop\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -28,7 +30,7 @@ public class browserTest2_testNG {
 		driver.findElement(By.xpath("//*[@id=\"a-autoid-1\"]/span/input")).click();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {	
 		String at = driver.getTitle();
 		String et = "Amazon.in : Iphone 13";
