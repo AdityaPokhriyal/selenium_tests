@@ -10,5 +10,8 @@ node {
 	   bat "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
        }
 		}
-	exit 0
+	stage ('Exit'){
+	   currentBuild.result = 'SUCCESS'
+   	   return		
+	}
 }
