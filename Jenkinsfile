@@ -10,4 +10,5 @@ node {
 	   bat "java -jar seleniumJavaFramework-0.0.1-SNAPSHOT.jar"
        }
 		}
+	bat "set +e"
 }
